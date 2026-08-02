@@ -6,6 +6,7 @@
   --accent: #000000;
   --border: rgba(0, 0, 0, 0.15); /* Slightly more defined borders */
   --transition: cubic-bezier(0.16, 1, 0.3, 1);
+  --aspect-ratio: 4/3;
 }
 
 * {
@@ -51,6 +52,7 @@ header {
   z-index: 100;
   background: linear-gradient(to bottom, var(--bg) 65%, transparent);
   pointer-events: none;
+  height: 6rem;
 }
 
 header > * {
@@ -90,15 +92,18 @@ main {
 }
 
 .gallery-header {
-  margin-bottom: 8rem;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  margin-top: -12rem;
 }
 
 .gallery-header h1 {
   font-size: clamp(4rem, 8vw, 7rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
-  margin-bottom: 2rem;
 }
 
 .gallery-header h1 {
@@ -113,7 +118,26 @@ main {
 .gallery-header p {
   font-size: 1.125rem;
   color: var(--text-muted);
-  max-width: 500px;
+  max-width: 80%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.gallery-subheader {
+  margin-bottom: 2.5rem;
+}
+
+.gallery-subheader h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.gallery-subheader p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 800px;
 }
 
 .exhibition-grid {
@@ -127,24 +151,24 @@ main {
 
 .artwork-card {
   cursor: pointer;
-  width: 75%;
+  width: 65%;
   height: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: var(--aspect-ratio);
 }
 
 .artwork-card:nth-child(even) {
-  transform: translateX(17%);
+  transform: translateX(11rem);
 }
 
 .artwork-card:nth-child(odd) {
-  transform: translateX(-17%);
+  transform: translateX(-11rem);
 }
 
 .frame {
   background-color: var(--surface);
-  border: 5px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: 2px;
-  aspect-ratio: 16/9;
+  aspect-ratio: var(--aspect-ratio);
   overflow: hidden;
   position: relative;
   margin-bottom: 1.5rem;
@@ -156,8 +180,9 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(50%) contrast(100%);
+  filter: grayscale(65%) contrast(100%);
   transform: scale(1);
+  aspect-ratio: var(--aspect-ratio);
   transition:
     transform 0.8s var(--transition),
     filter 0.8s var(--transition);
