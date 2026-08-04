@@ -116,9 +116,9 @@ main {
 }
 
 .gallery-header p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
-  max-width: 80%;
+  max-width: 65%;
   text-align: center;
   margin-top: 1rem;
 }
@@ -157,11 +157,11 @@ main {
 }
 
 .artwork-card:nth-child(even) {
-  transform: translateX(11rem);
+  transform: translateX(13.5vw);
 }
 
 .artwork-card:nth-child(odd) {
-  transform: translateX(-11rem);
+  transform: translateX(-13.5vw);
 }
 
 .frame {
@@ -233,7 +233,9 @@ main {
 footer {
   border-top: 1px solid var(--border);
   margin-top: 12rem;
-  padding: 4rem;
+
+  padding: 4rem 8rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
