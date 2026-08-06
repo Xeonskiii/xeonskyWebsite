@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: #ffffff;
   --surface: #eeeeee; /* Slightly darker than #f4f4f4 for more depth */
@@ -8,7 +12,24 @@
   --transition: cubic-bezier(0.16, 1, 0.3, 1);
   --aspect-ratio: 4/3;
 }
+main {
+  padding: 12rem 4rem 8rem 4rem;
+  max-width: 100%;
+  margin: 0 auto;
 
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  /* Hides the scrollbar for Firefox */
+  scrollbar-width: none;
+}
+
+/* Hides the scrollbar for Chrome, Safari, and Edge */
+main::-webkit-scrollbar {
+  display: none;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -98,10 +119,14 @@ main {
   align-items: center;
   height: 100dvh;
   margin-top: -12rem;
+
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .gallery-header h1 {
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(0.1rem, 9rem, 10rem);
+  font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.02em;
 }
@@ -150,7 +175,9 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .artwork-description {
@@ -185,6 +212,8 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 
   gap: 3rem;
   margin: 3rem 0;
