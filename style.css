@@ -122,12 +122,6 @@ header > * {
   color: var(--text-main);
 }
 
-main {
-  padding: 12rem 4rem 8rem 4rem;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
 .gallery-header {
   display: flex;
   flex-direction: column;
@@ -198,16 +192,34 @@ main {
 
 .artwork-description {
   flex: 1;
-  font-size: clamp(0.1rem, 1.75vw, 1.75rem);
-  color: var(--text-muted);
-  text-align: justify;
-  max-width: 400px;
+  text-align: left;
+  max-width: 500px;
   opacity: 0;
   visibility: hidden;
+
   transition:
     opacity 0.8s var(--transition),
     visibility 0.8s var(--transition),
     transform 0.8s var(--transition);
+}
+.artwork-description p {
+  color: var(--text-muted);
+  font-size: clamp(0.1rem, 1.25rem, 1.25rem);
+  padding-top: 0.5rem;
+}
+.artwork-description h1 {
+  font-size: clamp(0.1rem, 2.5vw, 2.5rem);
+  color: var(--text-main);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.artwork-description h2 {
+  color: var(--text-muted);
+  font-size: clamp(0.1rem, 1rem, 1rem);
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
 }
 .artwork-card:nth-child(even) .artwork-description {
   transform: translateX(10vw);
@@ -225,13 +237,13 @@ main {
 
 .artwork-card {
   cursor: pointer;
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   align-items: center;
 
   gap: 3rem;
-  margin: 3rem 0;
+  margin: 5rem 0;
 }
 
 .artwork-card:nth-child(even) {
@@ -284,20 +296,23 @@ main {
   border-bottom: 1px solid var(--border);
   padding-bottom: 1rem;
 
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
   transition:
     opacity 0.8s var(--transition),
     visibility 0.8s var(--transition),
     transform 0.8s var(--transition);
 }
-
-.artwork-card:hover .artwork-meta,
 .artwork-card:hover .artwork-description {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0);
+}
+.artwork-card:hover .artwork-meta {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
 }
 
 .artwork-title {
