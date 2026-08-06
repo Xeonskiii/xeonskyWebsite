@@ -18,29 +18,30 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo">xeonsky</a>
+      <a href="#home" class="logo">xeonsky</a>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#robotics">Robotics</a></li>
+        <li><a href="#personal">Personal</a></li>
+        <li>
+          <a href="#contact" id="contact-link" onclick="revealEmail(event)"
+            >Contact</a
+          >
+        </li>
       </ul>
     </header>
 
     <main>
-      <div class="gallery-header">
+      <div class="gallery-header" id="home">
         <h1><span>Prince </span>Xeon<span> M.</span></h1>
         <p>
-          Computer science student with a background in systems configuration
-          and development. Featuring a curated collection of works, builds, and
-          technical projects.
+          Computer science student and robotics enthusiast. Willing to learn
+          anything and everything in tech. This is my curated collection of
+          works, builds, projects, and experiences.
         </p>
       </div>
 
-      <div class="gallery-header category">
+      <div class="gallery-header category" id="robotics">
         <h1>ROBOTICS</h1>
-        <p>
-          My collection of robotics works, builds, projects, and experience.
-        </p>
       </div>
 
       <div class="exhibition-grid" id="works">
@@ -48,10 +49,10 @@
         <div class="artwork-card">
           <div class="artwork-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Taken during one of our practice runs. Claiming Top 6 overall and
+              Top 3 in the combined Autonomous and Driver Skills Leaderboard,
+              aswell as the Design Award for professional engineering
+              documentation and build quality.
             </p>
           </div>
           <div class="artwork-content">
@@ -59,9 +60,9 @@
               <img src="images/Robotics/221S_RedRobot.jpeg" />
             </div>
             <div class="artwork-meta">
-              <h3 class="artwork-title">221S(Red Alliance)</h3>
+              <h3 class="artwork-title">221S</h3>
               <span class="artwork-tag"
-                >Westwood Robotics Tune Up Competition 2024</span
+                >Westwood Robotics Tune Up Competition 2025</span
               >
             </div>
           </div>
@@ -71,10 +72,10 @@
         <div class="artwork-card">
           <div class="artwork-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Taken with our sister team, 221X. In this event, we achieved a Top
+              25 finish out of 200 global competitors at Canada’s largest
+              robotics competition, placing us in the top 12% of the
+              international field.
             </p>
           </div>
           <div class="artwork-content">
@@ -84,7 +85,7 @@
             <div class="artwork-meta">
               <h3 class="artwork-title">221S & 221X</h3>
               <span class="artwork-tag"
-                >Mecha Mayhem International Signature Event 2024</span
+                >Mecha Mayhem International Signature Event 2025</span
               >
             </div>
           </div>
@@ -93,10 +94,9 @@
         <div class="artwork-card">
           <div class="artwork-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Taken during Qualifying rounds, matched with Team 3388C. We ended
+              competition off with a Top 5 Finish, and Ranked 6 in the combined
+              Autonomous and Driver Skills Leaderboard.
             </p>
           </div>
 
@@ -107,7 +107,7 @@
             <div class="artwork-meta">
               <h3 class="artwork-title">221S & 3388C</h3>
               <span class="artwork-tag"
-                >Alberta Provincial Championship 2024</span
+                >Alberta Provincial Championship 2025</span
               >
             </div>
           </div>
@@ -116,44 +116,61 @@
         <div class="artwork-card">
           <div class="artwork-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Acted as the subsitute driver aswell as main programmer and
+              builder. Achieving Top 3 overall and Top 2 in the combined
+              Autonomous and Driver Skills Leaderboard. Additionally winning the
+              Design Award.
             </p>
           </div>
 
           <div class="artwork-content">
             <div class="frame">
-              <img src="images/Robotics/MeCoding.jpeg" />
+              <img src="images/Robotics/221SFirst.jpeg" />
             </div>
             <div class="artwork-meta">
-              <h3 class="artwork-title">xeonsky</h3>
+              <h3 class="artwork-title">221S</h3>
               <span class="artwork-tag"
-                >Alberta Provincial Championship 2024</span
+                >FortMcMurray Season Opener: World's Most Northern VEX
+                Tournament 2024</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--Item4 -->
+        <div class="artwork-card">
+          <div class="artwork-description">
+            <p>
+              Inspecting and rebuilding the drivetrain and a general system
+              check in preparation for the FTC CENTERSTAGE Alberta Provincial
+              Championship. Finished 3rd place overall and claiming the Design
+              Award.
+            </p>
+          </div>
+
+          <div class="artwork-content">
+            <div class="frame">
+              <img src="images/Robotics/20176Rebuild.jpeg" />
+            </div>
+            <div class="artwork-meta">
+              <h3 class="artwork-title">20176</h3>
+              <span class="artwork-tag"
+                >William Aberhart FTC CENTERSTAGE Season</span
               >
             </div>
           </div>
         </div>
       </div>
 
-      <div class="gallery-subheader">
-        <h2>Personal</h2>
-        <p>
-          A collection of personal works, builds, projects, and experiences.
-        </p>
+      <div class="gallery-header" id="personal">
+        <h1>Personal</h1>
       </div>
 
       <div class="exhibition-grid" id="works">
         <!--Item1 -->
         <div class="artwork-card">
           <div class="artwork-description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p></p>
           </div>
           <div class="artwork-content">
             <div class="frame">
@@ -169,12 +186,7 @@
         <!--Item2 -->
         <div class="artwork-card">
           <div class="artwork-description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p></p>
           </div>
           <div class="artwork-content">
             <div class="frame">
@@ -189,12 +201,7 @@
         <!--Item3 -->
         <div class="artwork-card">
           <div class="artwork-description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p></p>
           </div>
           <div class="artwork-content">
             <div class="frame">
@@ -211,24 +218,28 @@
         <div class="artwork-card">
           <div class="artwork-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Built a custom Minecraft Multiplayer environment for friends on
+              local Linux hardware. Used playit.gg tunneling proxies to allow
+              seamless external player connections without port forwarding,
+              protecting the home network from exposure.
             </p>
           </div>
           <div class="artwork-content">
             <div class="frame">
-              <img src="images/Personal/Linux.jpeg" />
+              <img src="images/Personal/MinecraftServer.jpeg" />
             </div>
             <div class="artwork-meta">
-              <h3 class="artwork-title">Thorvaldson Building</h3>
-              <span class="artwork-tag">University of Saskatchewan</span>
+              <h3 class="artwork-title">Minecraft Modded Server</h3>
+              <span class="artwork-tag">
+                Self-Hosted Linux Laptop & playit.gg Tunneling
+              </span>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <!--
 
     <footer id="contact">
       <div class="footer-col">
@@ -248,6 +259,7 @@
         </ul>
       </div>
     </footer>
+    -->
 
     <script src="script.js"></script>
   </body>

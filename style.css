@@ -99,7 +99,23 @@ header > * {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: color 0.3s var(--transition);
+  transition:
+    color 0.3s var(--transition),
+    opacity 0.4s ease,
+    max-width 0.4s ease,
+    font-size 0.4s ease,
+    transform 0.4s ease;
+}
+
+.nav-links a.fade {
+  transition:
+    color 0.3s var(--transition),
+    opacity 0.4s ease,
+    max-width 0.4s ease,
+    font-size 0.4s ease,
+    transform 0.4s ease;
+  max-width: 0;
+  font-size: 0px;
 }
 
 .nav-links a:hover {
@@ -184,6 +200,7 @@ main {
   flex: 1;
   font-size: clamp(0.1rem, 1.75vw, 1.75rem);
   color: var(--text-muted);
+  text-align: justify;
   max-width: 400px;
   opacity: 0;
   visibility: hidden;
@@ -212,8 +229,6 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 
   gap: 3rem;
   margin: 3rem 0;
@@ -232,12 +247,14 @@ main {
 .frame {
   background-color: var(--surface);
   border: 2px solid var(--border);
-  border-radius: 2px;
+  border-radius: 5px;
   aspect-ratio: var(--aspect-ratio);
   overflow: hidden;
   position: relative;
   margin-bottom: 1.5rem;
   transition: border-color 0.8s var(--transition);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .frame img,
