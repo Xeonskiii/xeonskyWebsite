@@ -147,6 +147,11 @@ header > * {
   color: #737373;
 }
 
+.gallery-header p span {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
 .gallery-header p {
   font-size: 1.25rem;
   color: var(--text-muted);
@@ -220,6 +225,12 @@ header > * {
   border-bottom: 1px solid var(--border);
 }
 
+.artwork-description .trophies {
+  color: var(--text-muted);
+  font-size: clamp(0.85rem, 1rem, 1rem);
+  padding-top: 1rem;
+}
+
 .artwork-card:hover .artwork-description:has(p:empty) {
   opacity: 100%;
   visibility: visible;
@@ -232,6 +243,25 @@ header > * {
   transform: translateX(-10vw);
 }
 
+.artwork-card.is-snapped .artwork-description {
+  opacity: 100%;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.artwork-card.is-snapped .artwork-meta {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.artwork-card.is-snapped .frame img,
+.artwork-card.is-snapped .frame video,
+.artwork-card.is-snapped .frame {
+  filter: grayscale(0%) contrast(100%);
+  border-color: transparent;
+}
+
 .artwork-content {
   flex: 1;
   display: flex;
@@ -241,7 +271,6 @@ header > * {
 }
 
 .artwork-card {
-  cursor: pointer;
   width: 80%;
   height: 100%;
   display: flex;
