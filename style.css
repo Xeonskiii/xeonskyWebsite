@@ -39,7 +39,7 @@ body {
   color: var(--text-main);
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -236,6 +236,8 @@ header > * {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  width: 100%;
 }
 
 .artwork-card {
@@ -403,6 +405,9 @@ footer {
     scroll-snap-stop: normal !important;
     margin-bottom: 0;
   }
+  .frame img {
+    filter: grayscale(100%) contrast(100%);
+  }
 
   main {
     padding: 8rem 2rem 4rem 2rem;
@@ -484,6 +489,10 @@ footer {
   .artwork-card {
     width: 100%;
     margin: 2rem 0;
+  }
+
+  .frame img {
+    filter: grayscale(100%) contrast(100%);
   }
 
   .artwork-description h1 {
