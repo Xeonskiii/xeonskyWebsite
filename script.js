@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ) {
             entry.target.classList.add("is-snapped");
           }
-        }, 1750);
+        }, 250);
       }
     });
   }, observerOptions);
