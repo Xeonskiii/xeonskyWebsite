@@ -135,10 +135,11 @@ header > * {
 }
 
 .gallery-header h1 {
-  font-size: clamp(0.1rem, 9rem, 10rem);
+  font-size: clamp(3rem, 9vw, 10rem);
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .gallery-header h1 {
@@ -204,22 +205,28 @@ header > * {
 }
 .artwork-description p {
   color: var(--text-muted);
-  font-size: clamp(0.1rem, 1.25rem, 1.25rem);
-  padding-top: 0.5rem;
+  font-size: clamp(0.9rem, 1.25rem, 1.25rem);
+  padding-top: 1rem;
 }
 .artwork-description h1 {
-  font-size: clamp(0.1rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  line-height: 1;
   color: var(--text-main);
   font-weight: 600;
   text-transform: uppercase;
 }
 .artwork-description h2 {
   color: var(--text-muted);
-  font-size: clamp(0.1rem, 1rem, 1rem);
+  font-size: clamp(0.85rem, 1rem, 1rem);
   padding-bottom: 0.5rem;
   font-weight: 400;
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
+}
+
+.artwork-card:hover .artwork-description:has(p:empty) {
+  opacity: 100%;
+  visibility: visible;
 }
 .artwork-card:nth-child(even) .artwork-description {
   transform: translateX(10vw);
@@ -247,12 +254,10 @@ header > * {
 }
 
 .artwork-card:nth-child(even) {
-  /*transform: translateX(10vw);*/
   flex-direction: row;
 }
 
 .artwork-card:nth-child(odd) {
-  /*transform: translateX(-10vw);*/
   flex-direction: row-reverse;
 }
 
@@ -304,6 +309,16 @@ header > * {
     visibility 0.8s var(--transition),
     transform 0.8s var(--transition);
 }
+.artwork-meta-empty {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+
+  opacity: 1;
+  visibility: visible;
+}
 .artwork-card:hover .artwork-description {
   opacity: 1;
   visibility: visible;
@@ -316,13 +331,13 @@ header > * {
 }
 
 .artwork-title {
-  font-size: clamp(0.1rem, 1.25vw, 1.25rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 
 .artwork-tag {
-  font-size: clamp(0.1rem, 0.75vw, 0.75rem);
+  font-size: clamp(0.65rem, 0.75vw, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -331,9 +346,7 @@ header > * {
 footer {
   border-top: 1px solid var(--border);
   margin-top: 12rem;
-
   padding: 4rem 8rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -373,4 +386,122 @@ footer {
 
 .social-links a:hover {
   border-color: var(--text-main);
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES & FIXES
+   ========================================== */
+
+/* Tablet & Smaller Laptops (1024px and down) */
+@media screen and (max-width: 1024px) {
+  main,
+  .exhibition-grid {
+    scroll-snap-type: none !important;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .gallery-header {
+    height: 100vh;
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+  }
+
+  .frame {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+    margin-bottom: 0;
+  }
+
+  main {
+    padding: 8rem 2rem 4rem 2rem;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  .gallery-header p {
+    max-width: 85%;
+  }
+
+  .artwork-card,
+  .artwork-card:nth-child(even),
+  .artwork-card:nth-child(odd) {
+    flex-direction: column !important;
+    width: 90%;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .artwork-card:nth-child(even) .artwork-description,
+  .artwork-card:nth-child(odd) .artwork-description {
+    transform: translateY(0) !important;
+  }
+
+  .artwork-description {
+    max-width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Hide artwork-meta when resized */
+  .artwork-meta {
+    display: none !important;
+  }
+}
+
+/* Mobile Devices (768px and down) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1.5rem;
+    height: 5rem;
+    background: var(--bg);
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .gallery-header {
+    height: 80dvh;
+    margin-top: -6rem;
+    padding: 0 1rem;
+  }
+
+  .gallery-header h1 {
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
+  }
+
+  .gallery-header p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .exhibition-grid {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .artwork-card {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .artwork-description h1 {
+    font-size: 1.5rem;
+  }
+
+  .artwork-description p {
+    font-size: 1rem;
+  }
 }
