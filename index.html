@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,8 +40,8 @@
         <h1>Welcome!</h1>
         <p>
           Hi! I'm Prince <span>Xeon</span>, a computer science student at the
-          University of Saskatchewan and a robotics enthusiast. Willing to learn
-          anything and everything in tech. This is my curated collection of
+          University of Saskatchewan and a robotics enthusiast. Eager to learn
+          anything and everything in tech, this is my curated collection of
           works, builds, projects, and experiences.
         </p>
       </div>
@@ -46,69 +51,32 @@
       </div>
 
       <div class="exhibition-grid" id="works">
-        <!--Item1 -->
-        <div class="artwork-card">
-          <div class="artwork-description">
-            <h1>Westwood Robotics Tune Up Competition</h1>
-            <h2>Team 221S, 2025</h2>
-            <p>
-              Taken during one of our practice runs. Claiming Top 6 overall and
-              Top 3 in the combined Autonomous and Driver Skills Leaderboard,
-              aswell as the Design Award for professional engineering
-              documentation and build quality.
-            </p>
-            <h2 class="trophies">Trophies:</h2>
-            <div class="trophies-list">
-              <h3>Top <span>6</span> Overall</h3>
-              <h3>
-                Top <span>3</span> in Combined Autonomous and Driver Skills
-              </h3>
-              <h3>Design Award</h3>
-            </div>
-          </div>
-          <div class="artwork-content">
-            <div class="frame">
-              <div class="container">
-                <section>
-                  <img src="images/Robotics/TuneUP/1.jpeg" loading="lazy" />
-                </section>
-                <section>
-                  <img src="images/Robotics/TuneUP/2.jpg" loading="lazy" />
-                </section>
-                <section>
-                  <img src="images/Robotics/TuneUP/3.jpg" loading="lazy" />
-                </section>
-                <section>
-                  <img src="images/Robotics/TuneUP/4.jpg" loading="lazy" />
-                </section>
-              </div>
-            </div>
-            <div class="artwork-meta-empty">
-              <h3 class="artwork-title">Westwood</h3>
-              <span class="artwork-tag"
-                >Westwood Robotics Tune Up Competition 2025</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <!--Item2 -->
+        <!--Item1: Mecha Mayhem -->
         <div class="artwork-card">
           <div class="artwork-description">
             <h1>Mecha Mayhem Signature Event</h1>
             <h2>Team 221S, 2025</h2>
             <p>
-              In this event, we achieved a Top 25 finish out of 200 global
-              competitors at Canada’s largest robotics competition, placing us
-              in the top 12% of the international field.
+              Canada’s biggest robotics competition with over 200 teams from
+              around the world. The goal here was reinforcing the chassis so it
+              would be tough enough to survive heavy defense while refining our
+              lift angles to easily score rings on low mobile goals and high
+              wall stakes. I also built a quick autonomous selector so we could
+              swap routines on the fly to match whatever our alliance partners
+              needed.
             </p>
-            <h2 class="trophies">Trophies:</h2>
+            <h2 class="trophies"></h2>
             <div class="trophies-list">
-              <h3>Top <span>25</span> Overall</h3>
-              <h3>
-                Ranked <span>73</span> in Combined Autonomous and Driver Skills
-              </h3>
-              <h3>Design Award</h3>
+              <div class="list">
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>25</span> out of 200 global competitors
+                </h3>
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Ranked
+                  <span>73</span> in Combined Skills
+                </h3>
+              </div>
             </div>
           </div>
           <div class="artwork-content">
@@ -139,31 +107,37 @@
                   />
                 </section>
               </div>
-              >
             </div>
             <div class="artwork-meta-empty">
-              <h3 class="artwork-title">Westwood</h3>
-              <span class="artwork-tag"
-                >Mecha Mayhem International Signature Event 2025</span
-              >
+              <h3 class="artwork-title">BMO Centre</h3>
+              <span class="artwork-tag">Mecha Mayhem Signature Event 2025</span>
             </div>
           </div>
         </div>
-        <!--Item3 -->
+
+        <!--Item2: Alberta Provincial Championship -->
         <div class="artwork-card">
           <div class="artwork-description">
             <h1>Alberta Provincial Championship</h1>
             <h2>Team 221S, 2025</h2>
             <p>
-              We ended competition off with a Top 5 Finish, and Ranked 6 in the
-              combined Autonomous and Driver Skills Leaderboard.
+              Going up against the region's top alliances meant zero room for
+              error, so we put our updated engineering documentation and a
+              ironed-out mechanical build to the ultimate test to battle through
+              high-pressure elimination brackets.
             </p>
-            <h2 class="trophies">Trophies:</h2>
+            <h2 class="trophies"></h2>
             <div class="trophies-list">
-              <h3>Top <span>5</span> Overall</h3>
-              <h3>
-                Ranked <span>6</span> in Combined Autonomous and Driver Skills
-              </h3>
+              <div class="list">
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>5</span> Overall
+                </h3>
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Ranked
+                  <span>6</span> in Combined Skills
+                </h3>
+              </div>
             </div>
           </div>
 
@@ -185,73 +159,193 @@
               </div>
             </div>
             <div class="artwork-meta-empty">
-              <h3 class="artwork-title">Westwood</h3>
+              <h3 class="artwork-title">Westwood Community Highschool</h3>
               <span class="artwork-tag"
                 >Alberta Provincial Championship 2025</span
               >
             </div>
           </div>
         </div>
-        <!--Item4 -->
+
+        <!--Item3: Westwood Competition -->
         <div class="artwork-card">
           <div class="artwork-description">
-            <h1>World's Most Northern VEX Tournament</h1>
-            <h2>Team 221S, 2024</h2>
+            <h1>Westwood Robotics Tune Up Competition</h1>
+            <h2>Team 221S, 2025</h2>
             <p>
-              Acted as the subsitute driver aswell as main programmer and
-              builder. Achieving Top 3 overall and Top 2 in the combined
-              Autonomous and Driver Skills Leaderboard. Additionally winning the
-              Design Award.
+              Our final dry run right before Mecha Mayhem. We gave the robot a
+              fresh look with custom black and pink color accents and went
+              through every single metal and electrical piece to make sure
+              nothing was bent or out of spec. By cutting the weight down to 15
+              lbs, tightening up our PID loops, and tweaking the arm, we finally
+              got consistent scoring on both high and low goals locked down.
             </p>
-            <h2 class="trophies">Trophies:</h2>
+
+            <h2 class="trophies"></h2>
+
             <div class="trophies-list">
-              <h3>Top <span>3</span> Overall</h3>
-              <h3>Top <span>2</span> Combined Skills</h3>
-              <h3>Design Award</h3>
+              <div class="list">
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>6</span> Overall
+                </h3>
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top <span>3</span> in
+                  Combined Skills
+                </h3>
+                <h3><i class="fa-solid fa-trophy"></i> Design Award</h3>
+              </div>
             </div>
           </div>
-
           <div class="artwork-content">
             <div class="frame">
-              <img src="images/Robotics/221SFirst.jpeg" loading="lazy" />
+              <div class="container">
+                <section>
+                  <img src="images/Robotics/TuneUP/1.jpeg" loading="lazy" />
+                </section>
+                <section>
+                  <img src="images/Robotics/TuneUP/2.jpg" loading="lazy" />
+                </section>
+                <section>
+                  <img src="images/Robotics/TuneUP/3.jpg" loading="lazy" />
+                </section>
+                <section>
+                  <img src="images/Robotics/TuneUP/4.jpg" loading="lazy" />
+                </section>
+              </div>
             </div>
             <div class="artwork-meta-empty">
-              <h3 class="artwork-title">221S</h3>
+              <h3 class="artwork-title">Westwood Community Highschool</h3>
               <span class="artwork-tag"
-                >FortMcMurray Season Opener: World's Most Northern VEX
-                Tournament 2024</span
+                >Westwood Robotics Tune Up Competition 2025</span
               >
             </div>
           </div>
         </div>
 
-        <!--Item4 -->
+        <!--Item4: STEM Innovation Event -->
         <div class="artwork-card">
           <div class="artwork-description">
-            <h1>Alberta Provincial Championship</h1>
-            <h2>Team 20176, 2024</h2>
+            <h1>STEM Innovation Academy Tournament</h1>
+            <h2>Team 221S, 2024</h2>
             <p>
-              Inspecting and rebuilding the drivetrain and a general system
-              check in preparation for the FTC CENTERSTAGE Alberta Provincial
-              Championship. Finished 3rd place overall and claiming the Design
-              Award.
+              This event brought a complete ground-up redesign. Our first robot
+              was a heavy 30 lbs, which meant the drivetrain motors would
+              overheat and thermal throttle after just one match. We trimmed it
+              down to a 20 lbs, added high-goal scoring, and implemented in PID
+              and odometry for way better autonomous precision. A lot of
+              late-night testing went into fixing intake tension issues and
+              making our mobile goal clamp actually reliable, which paid off
+              with the Design Award.
             </p>
-            <h2 class="trophies">Trophies:</h2>
+
+            <h2 class="trophies"></h2>
+
             <div class="trophies-list">
-              <h3>Top <span>3</span> Overall</h3>
-              <h3>Design Award</h3>
+              <div class="list">
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>6</span> Overall
+                </h3>
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>13</span> Combined Skills
+                </h3>
+                <h3><i class="fa-solid fa-trophy"></i> Design Award</h3>
+              </div>
             </div>
           </div>
-
           <div class="artwork-content">
             <div class="frame">
-              <img src="images/Robotics/20176Rebuild.jpeg" loading="lazy" />
+              <div class="container">
+                <section>
+                  <img
+                    src="images/Robotics/StemInnovate/1.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+                <section>
+                  <img
+                    src="images/Robotics/StemInnovate/2.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+                <section>
+                  <img
+                    src="images/Robotics/StemInnovate/3.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+              </div>
             </div>
             <div class="artwork-meta-empty">
-              <h3 class="artwork-title">20176</h3>
-              <span class="artwork-tag"
-                >William Aberhart FTC CENTERSTAGE Season</span
-              >
+              <h3 class="artwork-title">STEM Innovation Academy</h3>
+              <span class="artwork-tag">Calgary Tournament 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Item5: Northern Most Tournament -->
+        <div class="artwork-card">
+          <div class="artwork-description">
+            <h1>World's Most Northern VEX Tournament</h1>
+            <h2>Team 221S, 2024</h2>
+            <p>
+              Our very first competition and season opener. As the lead builder
+              and programmer, I ended up pulling double-duty as the primary
+              driver for this event. Getting ready meant a massive sprint of
+              rapid prototyping and writing our initial autonomous routines
+              completely from scratch.
+            </p>
+
+            <h2 class="trophies"></h2>
+
+            <div class="trophies-list">
+              <div class="list">
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>3</span> Overall
+                </h3>
+                <h3>
+                  <i class="fa-solid fa-ranking-star"></i> Top
+                  <span>2</span> Combined Autonomous and Driver Skills Challenge
+                </h3>
+                <h3><i class="fa-solid fa-trophy"></i> Design Award</h3>
+              </div>
+            </div>
+          </div>
+          <div class="artwork-content">
+            <div class="frame">
+              <div class="container">
+                <section>
+                  <img
+                    src="images/Robotics/NorthernMost/1.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+                <section>
+                  <img
+                    src="images/Robotics/NorthernMost/2.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+                <section>
+                  <img
+                    src="images/Robotics/NorthernMost/3.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+                <section>
+                  <img
+                    src="images/Robotics/NorthernMost/4.jpeg"
+                    loading="lazy"
+                  />
+                </section>
+              </div>
+            </div>
+            <div class="artwork-meta-empty">
+              <h3 class="artwork-title">Westwood Community Highschool</h3>
+              <span class="artwork-tag">FortMcMurray Season Opener 2024</span>
             </div>
           </div>
         </div>
@@ -335,28 +429,6 @@
         </div>
       </div>
     </main>
-
-    <!--
-
-    <footer id="contact">
-      <div class="footer-col">
-        <h4>Sample</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contacts</h4>
-        <ul class="social-links">
-          <li><a href="#">Github</a></li>
-          <li><a href="#">Email</a></li>
-          <li><a href="#">Phone</a></li>
-        </ul>
-      </div>
-    </footer>
-    -->
 
     <script src="script.js"></script>
   </body>

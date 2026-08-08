@@ -106,10 +106,10 @@ header > * {
 .nav-links a.fade {
   transition:
     color 0.3s var(--transition),
-    opacity 0.4s ease,
-    max-width 0.4s ease,
-    font-size 0.4s ease,
-    transform 0.4s ease;
+    opacity 0.2s ease,
+    max-width 0.2s ease,
+    font-size 0.2s ease,
+    transform 0.2s ease;
   max-width: 0;
   font-size: 0px;
 }
@@ -158,6 +158,7 @@ header > * {
   max-width: 65%;
   text-align: center;
   margin-top: 1rem;
+  line-height: 1.5;
 }
 
 .gallery-subheader {
@@ -206,8 +207,9 @@ header > * {
 }
 .artwork-description p {
   color: var(--text-muted);
-  font-size: clamp(0.9rem, 1.25rem, 1.25rem);
-  padding: 1.5rem 0;
+  font-size: clamp(0.1vh, 1.5vh, 5vh);
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
   line-height: 1.3;
 }
 .artwork-description h1 {
@@ -215,7 +217,7 @@ header > * {
   line-height: 1.2;
   color: var(--text-main);
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: normal;
 }
 .artwork-description h2 {
   color: var(--text-main);
@@ -242,16 +244,23 @@ header > * {
 }
 
 .artwork-description .trophies-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
   list-style: none;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+}
+
+.trophy {
+  padding: 0 0.5rem;
 }
 
 .artwork-description h3 {
   color: var(--text-main);
   font-size: clamp(0.85rem, 1rem, 1rem);
-  text-transform: uppercase;
+  text-transform: normal;
   font-weight: 200;
-  padding: 0.15rem 0;
+  padding: 0.5rem 0;
 }
 
 .artwork-card:hover .artwork-description:has(p:empty) {
@@ -291,6 +300,7 @@ header > * {
   flex-direction: column;
   min-width: 0;
   width: 100%;
+  max-width: 1600px;
 }
 
 .artwork-card {
@@ -300,7 +310,7 @@ header > * {
   align-items: flex-start;
 
   gap: 3rem;
-  margin: 5rem 0;
+  margin: 10rem 0;
 }
 
 .artwork-card:nth-child(even) {
@@ -312,6 +322,7 @@ header > * {
 }
 
 .frame {
+  cursor: grab;
   background-color: var(--surface);
   border: 2px solid var(--border);
   border-radius: 5px;
@@ -326,17 +337,17 @@ header > * {
 
 .container:has(> section:first-child:nth-last-child(2)) {
   --slide-count: 2;
-  animation: slide-2 5s ease-in-out infinite;
+  animation: slide-2 4s ease-in-out infinite;
 }
 
 .container:has(> section:first-child:nth-last-child(3)) {
   --slide-count: 3;
-  animation: slide-3 8s ease-in-out infinite;
+  animation: slide-3 6s ease-in-out infinite;
 }
 
 .container:has(> section:first-child:nth-last-child(4)) {
   --slide-count: 4;
-  animation: slide-4 11s ease-in-out infinite;
+  animation: slide-4 9s ease-in-out infinite;
 }
 
 .container {
@@ -349,9 +360,7 @@ header > * {
   width: 100%;
   height: 100%;
   float: left;
-}
-.container section:nth-child(2) {
-  background-color: orange;
+  background-color: black;
 }
 
 .container:hover {
@@ -583,6 +592,9 @@ footer {
     visibility: visible;
     transform: translateY(0);
   }
+  .artwork-description p {
+    font-size: clamp(0.1rem, 1rem, 1.25rem);
+  }
 
   .artwork-meta {
     display: none !important;
@@ -630,7 +642,10 @@ footer {
 
   .artwork-card {
     width: 100%;
-    margin: 2rem 0;
+    margin: 10rem 0;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
   }
 
   .frame img {

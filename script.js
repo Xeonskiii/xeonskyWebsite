@@ -52,7 +52,7 @@ function revealEmail(event) {
         // Fade in and expand back out smoothly
         link.classList.remove("fade");
       }, 10);
-    }, 400);
+    }, 250);
   } else {
     link.classList.add("fade");
 
@@ -68,6 +68,6 @@ function revealEmail(event) {
         // Fade in and expand back out smoothly
         link.classList.remove("fade");
       }, 10);
-    }, 400);
+    }, 250);
   }
 }
