@@ -207,28 +207,51 @@ header > * {
 .artwork-description p {
   color: var(--text-muted);
   font-size: clamp(0.9rem, 1.25rem, 1.25rem);
-  padding-top: 1rem;
+  padding: 1.5rem 0;
+  line-height: 1.3;
 }
 .artwork-description h1 {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  line-height: 1;
+  line-height: 1.2;
   color: var(--text-main);
   font-weight: 600;
   text-transform: uppercase;
 }
 .artwork-description h2 {
-  color: var(--text-muted);
+  color: var(--text-main);
   font-size: clamp(0.85rem, 1rem, 1rem);
-  padding-bottom: 0.5rem;
-  font-weight: 400;
+  padding: 0.5rem 0;
+  font-weight: 800;
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
 }
 
-.artwork-description .trophies {
-  color: var(--text-muted);
+.artwork-description span {
+  color: var(--text-main);
   font-size: clamp(0.85rem, 1rem, 1rem);
-  padding-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 0.15rem 0;
+}
+
+.artwork-description .trophies {
+  color: var(--text-main);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(0.85rem, 1rem, 1rem);
+}
+
+.artwork-description .trophies-list {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.artwork-description h3 {
+  color: var(--text-main);
+  font-size: clamp(0.85rem, 1rem, 1rem);
+  text-transform: uppercase;
+  font-weight: 200;
+  padding: 0.15rem 0;
 }
 
 .artwork-card:hover .artwork-description:has(p:empty) {
@@ -274,7 +297,7 @@ header > * {
   width: 80%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   gap: 3rem;
   margin: 5rem 0;
@@ -299,6 +322,96 @@ header > * {
   transition: border-color 0.8s var(--transition);
   scroll-snap-align: center;
   scroll-snap-stop: always;
+}
+
+.container:has(> section:first-child:nth-last-child(2)) {
+  --slide-count: 2;
+  animation: slide-2 5s ease-in-out infinite;
+}
+
+.container:has(> section:first-child:nth-last-child(3)) {
+  --slide-count: 3;
+  animation: slide-3 8s ease-in-out infinite;
+}
+
+.container:has(> section:first-child:nth-last-child(4)) {
+  --slide-count: 4;
+  animation: slide-4 11s ease-in-out infinite;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: calc(100% * var(--slide-count));
+}
+
+.container section {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.container section:nth-child(2) {
+  background-color: orange;
+}
+
+.container:hover {
+  animation-play-state: paused !important;
+}
+/* Timeline for 2 Slides */
+@keyframes slide-2 {
+  0%,
+  40% {
+    left: 0;
+  }
+  50%,
+  90% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Timeline for 3 Slides */
+@keyframes slide-3 {
+  0%,
+  25% {
+    left: 0;
+  }
+  33%,
+  58% {
+    left: -100%;
+  }
+  66%,
+  91% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Timeline for 4 Slides */
+@keyframes slide-4 {
+  0%,
+  18% {
+    left: 0;
+  }
+  25%,
+  43% {
+    left: -100%;
+  }
+  50%,
+  68% {
+    left: -200%;
+  }
+  75%,
+  93% {
+    left: -300%;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 .frame img,
